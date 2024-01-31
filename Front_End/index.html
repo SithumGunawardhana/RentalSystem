@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta name="description" content="This is web project for spring framework">
+    <link rel="icon" href="assets/img/carProfile.png">
+    <title>Sithum car rental</title>
+
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+<header id="Header" class="fixed-top" style="z-index: 100">
+    <nav class="navbar navbar-expand-lg bg-body-white">
+        <div class="container-fluid">
+            <img   src="assets/img/carProfile.png" alt="" width="50">
+            <a class="navbar-brand p-2" href="#">Sithum car Rental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Cars">Cars</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex " role="click">
+
+
+                    <button class="btn  btn-primary m-2" type="submit"><a class="text-light" href="pages/RegisterForm.html">Sign in</a></button>
+                    <button class="btn btn-dark m-2" type="submit"><a class="text-light" href="pages/LoginForm.html">Log in</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<a class="position-fixed end-0 bottom-0 mb-5 me-5" href="https://web.whatsapp.com/" ><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-phone-vibrate" viewBox="0 0 16 16">
+    <path d="M10 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM6 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+    <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2M1.599 4.058a.5.5 0 0 1 .208.676A6.967 6.967 0 0 0 1 8c0 1.18.292 2.292.807 3.266a.5.5 0 0 1-.884.468A7.968 7.968 0 0 1 0 8c0-1.347.334-2.619.923-3.734a.5.5 0 0 1 .676-.208m12.802 0a.5.5 0 0 1 .676.208A7.967 7.967 0 0 1 16 8a7.967 7.967 0 0 1-.923 3.734.5.5 0 0 1-.884-.468A6.967 6.967 0 0 0 15 8c0-1.18-.292-2.292-.807-3.266a.5.5 0 0 1 .208-.676M3.057 5.534a.5.5 0 0 1 .284.648A4.986 4.986 0 0 0 3 8c0 .642.12 1.255.34 1.818a.5.5 0 1 1-.93.364A5.986 5.986 0 0 1 2 8c0-.769.145-1.505.41-2.182a.5.5 0 0 1 .647-.284m9.886 0a.5.5 0 0 1 .648.284C13.855 6.495 14 7.231 14 8c0 .769-.145 1.505-.41 2.182a.5.5 0 0 1-.93-.364C12.88 9.255 13 8.642 13 8c0-.642-.12-1.255-.34-1.818a.5.5 0 0 1 .283-.648z"/>
+</svg></a>
+
+
+
+
+
+
+
+<section id="Home" class="p-5 text-bg-light">
+
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-lg">
+
+                <div class="text-center" >
+
+
+
+                    <img src="assets/img/carDp1.png" alt="dp car" width="350" id="hCar" class="img-fluid img-size">
+
+                </div>
+
+                <div id="SM" class="d-flex p-1 justify-content-center">
+
+                    <div class="p-3" type="button" href="https://web.whatsapp.com/" ><a href="https://faq.whatsapp.com/1317564962315842/?cms_platform=web"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    </a>
+                    </div>
+
+                    <div type="button" class="p-3" >
+                        <a href="https://mobile.facebook.com/profile.php?id=100078041615055&_rdc=1&_rdr&refsrc=deprecated">  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                        </svg>
+                        </a>
+                    </div>
+
+                    <div type="button" class="p-3" >
+                        <a href="https://mail.google.com/mail/u/0/#inbox">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div type="button" class="p-3" >
+                        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div type="button" class="p-3" >
+                        <a href="https://github.com/SithumGunawardhana/Sithum-Car-rental">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="col-lg justify-content-center text-center">
+                <br>
+                <h1>Welcome </h1>
+
+                <h1 class="text-primary">Sithum Car Rental </h1>
+
+                <h1>Pvt Ltd. </h1>
+
+                <h1></h1>
+                <br>
+                <h5>Loking For a Car? You are in the right place.</h5>
+                <br>
+
+                <button class="btn btn-primary rounded-5 p-2"  id="r1" >Register</button>
+
+                <br><br>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="About">
+
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center p-5">About Us</h1>
+            <div class="col-lg">
+
+                <img src="assets/img/carDp2.jpeg" class="img-fluid img-size" width="600">
+            </div>
+            <div class="col-lg   text-center">
+                <br>
+                <h4><u> WELCOME TO
+                    SITHUM CAR RENTAL
+                </u></h4>
+
+                <h5 class="p-3 m-1 "> With over 3 years of experience in the industry,
+                    we strive to offer the highest levels of customer
+                    service and a highly personalised service to all
+                    our customers who are on the lookout for Sri Lanka
+                    car rental opportunities. With one of the largest
+                    and most modern and varied fleets in Sri Lanka,
+                    our service is backed by a networked front office,
+                    fully-fledged mechanical servicing and valet servicing onsite.</h5>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+</section>
+<section id="Cars" class="bg-light">
+    <br>
+    <div class="text-center">
+        <h1 class="">Cars</h1>
+        <br>
+        <h5 class="text-primary">
+            Premier Car Rental Services In Sri Lanka
+
+
+        </h5>
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="row text-center">
+            <div class="col-sm">
+
+                <h3>  General Cars</h3>
+
+                <div >
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ZUZUKI</h5>
+
+
+
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">BENCE</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">TATA</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-sm">
+                <h3> Luxury Cars</h3>
+                <div >
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">VAGON-R</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PRADO</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">DEFENDER</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <h3>Premium Cars</h3>
+                <div >
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car7.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MISTUBISHI</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AXIO</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/car9.png" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <h5 class="card-title">PANDA CAR</h5>
+                            <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="pages/RegisterForm.html" class="btn btn-primary" >REGISTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br>
+
+
+</section>
+<section id="Contact" >
+    <br>
+    <h1 class="text-center p-3">Contact Us</h1>
+    <h1 class="text-center" style="font-family: Gill Sans, sans-serif;">How can i help you ? </h1>
+    <br>
+
+
+
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg m-2 ">
+                <div class="card shadow-lg p-3  bg-body-tertiary rounded" style="width: 25rem;">
+                    <br>
+                    <div class="card-body text-center" style="font-family: Georgia, serif;">
+                        <h1 class="card-title text-center text-primary" style="font-family: cursive;">Need help</h1>
+                        <br>
+                        <h2><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-house-check" viewBox="0 0 16 16">
+                            <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z"/>
+                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514Z"/>
+                        </svg>  Address</h2>
+                        <h5>No.2 Bonavista road, roomassala.</h5>
+                        <br>
+                        <h2><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                        </svg>  Mail</h2>
+                        <h5>sithumthilanka@icloud.com</h5>
+                        <br>
+                        <h2><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                        </svg>  Phone number</h2>
+                        <h5>+94767264216</h5>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="col-lg m-2">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body shadow-lg p-3  bg-body-tertiary rounded" >
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="name" class="form-control" id="name" placeholder="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cN" class="form-label">Contact Number</label>
+                            <input type="CN" class="form-control" id="cN" placeholder="0779264216">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button  class="btn btn-primary w-100 ">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+</section>
+
+<footer class="bg-primary text-center text-light">
+    <div>
+        <h1 class="text-light">Thank you!</h1>
+        <div>
+            <ul class="nav justify-content-center ">
+                <li> <a class="nav-link text-light " href="#">Home</a></li>
+                <li> <a class="nav-link text-light" href="#About">About</a></li>
+                <li> <a class="nav-link text-light" href="#Cars">Cars</a></li>
+                <li> <a class="nav-link text-light" href="#Contact">Contact</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <hr>
+        <div class="copyright">Copyright <strong><span>Sithum car Rental pvt Ltd.</span></strong></div>
+    </div>
+    <div>
+        DESIGN BY SITHUM THILANKA
+    </div>
+
+
+
+
+
+</footer>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/jquery-3.7.0.min.js"></script>
+<script>
+    $("#r1").click(function (){
+        window.location="pages/RegisterForm.html";
+        return false;
+    })
+
+
+
+</script>
+</body>
+</html>

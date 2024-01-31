@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sithum Car Rental | Payment Details</title>
+    <meta name="theme-color" content="#2980b9">
+    <meta name="view" content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=2">
+    <link rel="icon" href="../../favicon1.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/aos/aos.css">
+    <link rel="stylesheet" href="../../assets/css/adminFormStyles.css">
+    <link rel="stylesheet" href="../../assets/css/paymentDetails.css">
+</head>
+<body>
+<header class="header fixed-top" id="header">
+    <nav class="navbar navbar-expand-lg bg-transparent  ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../../favicon1.png" alt="Logo" width="40px" height="40px"
+                     class="d-inline-block align-text-top"> Sithum Car Rental
+            </a>
+
+
+        </div>
+    </nav>
+</header>
+
+
+<!-- ----------------------------------------Menu Side------------------------------------------------- -->
+<div class="container-fluid">
+    <div class="row gy-4">
+        <div class="col-2 position-relative">
+            <div class="position-relative mt-4">
+                <div id="sidebar" class="sidebar col-2">
+                    <ul class="sidebar-nav" id="sidebar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="../AdminForm.html">
+                                <i class="fas fa-chart-line"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse"
+                               href="#">
+                                <i class="fas fa-tasks"></i>Manage
+                            </a>
+                            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="ManageCustomers.html">
+                                        <i class="fas fa-users"></i>Customer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ManageDriver.html">
+                                        <i class="fas fa-user-alt"></i>Driver
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ManageCars.html">
+                                        <i class="fas fa-car"></i>Car
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                               href="#">
+                                <i class="fas fa-info-circle"></i>Details
+                            </a>
+                            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>Payment Details
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="RentDetails.html">
+                                        <i class="fas fa-exchange-alt"></i>Rent Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="RentRequest.html" id="myDetailsSection">
+                                <i class="fas fa-retweet"></i>Rent Request
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="IncomeDetails.html" id="incomeDetails">
+                                <i class="fas fa-chart-bar"></i>Income Details
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="AdminProfile.html" id="profileDetails">
+                                <i class="fas fa-user"></i>Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="../../index.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>LogOut</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 d-flex mt-5 position-relative">
+            <div class="content ps-0 ps-lg-5" id="paymentContents">
+                <h3 id="paymentHeader">Payment Details</h3>
+
+            </div>
+            <section class="paymentSection">
+                <div class="row mt-3">
+                    <div class="customerDetails">
+                        <div class="search-bar mt-4">
+                            <div class="search-form d-flex align-items-center">
+                                <input type="search" class="me-md-1" name="payment_search_Id" id="payment_search_Id"
+                                       placeholder="Search">
+                                <button type="button" class="btn btn-outline-primary me-md-1 col-1"
+                                        id="btnSearchPayment">Search
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-12 m-3 p-1">
+                            <form class="row" id="paymentForm">
+                                <section id="sec1Customer" class="col-4 mt-3">
+                                    <div class="mb-sm-0 d-flex">
+                                        <div class="mb-sm-0 me-md-3 col-9">
+                                            <label class="form-label" for="payment_Id">Payment Id</label>
+                                            <input type="text" readonly name="payment_Id"  class="form-control" id="payment_Id"
+                                                   placeholder="P00-001">
+                                            <small class="control-error text-danger"></small>
+                                        </div>
+                                        <div class="mb-sm-0 col-2 mt-4">
+                                            <button class="btn btn-outline-primary mt-2" id="btnAdd" type="button">
+                                                ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="mb-sm-0 mt-3">
+                                        <label for="rent_Id" class="form-label">Rent ID</label>
+                                        <select class="form-select" id="rent_Id" name="rent_Id">
+                                        </select>
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <div class="mb-sm-0 mt-3">
+                                        <label for="paymentType" class="form-label">Payment Type</label>
+                                        <select class="form-select" id="paymentType" name="paymentType">
+                                            <option value="NORMAL">NORMAL</option>
+                                            <option value="LOSS_DAMAGE">LOSS_DAMAGE</option>
+                                        </select>
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+
+                                </section>
+
+                                <section id="sec2Customer" class="col-4 mt-3">
+                                    <div class="mb-sm-0 ">
+                                        <label class="form-label" for="payment_date">Payment Date</label>
+                                        <input type="date" name="payment_date" class="form-control" id="payment_date"
+                                               placeholder="Payment Date">
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <div class="mb-sm-0 mt-3">
+                                        <label class="form-label" for="payment_time">Payment Time</label>
+                                        <input type="time" name="payment_time" class="form-control" id="payment_time"
+                                               placeholder="Payment Time">
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <div class="mb-sm-0 mt-3">
+                                        <label class="form-label" for="rentCost">Car Cost</label>
+                                        <input type="text" name="rentCost" class="form-control" id="rentCost"
+                                               placeholder="Car Cost">
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <!--<div class="mb-sm-0 mt-3">
+                                        <label class="form-label" for="days">Days</label>
+                                        <input type="text" name="days" class="form-control" id="days"
+                                               placeholder="Days">
+                                        <small class="control-error text-danger"></small>
+                                    </div>-->
+
+                                </section>
+
+                                <section id="sec3" class="col-4 mt-3">
+                                    <!--<div class="mb-sm-0 ">
+                                        <label class="form-label" for="mileage">Mileage</label>
+                                        <input type="text" name="mileage" class="form-control" id="mileage"
+                                               placeholder="Mileage">
+                                        <small class="control-error text-danger"></small>
+                                    </div>-->
+                                    <div class="mb-sm-0">
+                                        <label class="form-label" for="lostDamage">Damage Cost</label>
+                                        <input type="text" name="lostDamage" class="form-control" id="lostDamage"
+                                               placeholder="Damage Cost">
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <div class="mb-sm-0 mt-3">
+                                        <label class="form-label" for="driverCost">Driver Cost</label>
+                                        <input type="text" name="driverCost" class="form-control" id="driverCost"
+                                               placeholder="Driver Cost">
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <div class="mb-sm-0 mt-3">
+                                        <label for="total" class="form-label">Total</label>
+                                        <input type="text" name="total" class="form-control" id="total"
+                                               placeholder="Total">
+                                        <small class="control-error text-danger"></small>
+                                    </div>
+                                    <div class="mt-5 mb-2 d-grid gap-2 d-sm-flex justify-content-md-center ">
+                                        <button class="btn btn-outline-success me-md-1 col-4" id="btnSavePayment"
+                                                type="button">
+                                            Save
+                                        </button>
+                                        <!--<button class="btn btn-outline-warning me-md-1 col-4" id="btnUpdatePayment"
+                                                type="button">
+                                            Update
+                                        </button>-->
+                                    </div>
+                                    <div class="mt-2 mb-auto d-grid gap-2 d-sm-flex justify-content-md-center ">
+                                        <!--<button type="button" class="btn btn-outline-danger me-md-1 col-4"
+                                                id="btnDeletePayment">Delete
+                                        </button>-->
+                                        <button class="btn btn-outline-info me-md-1 col-4" id="btnGetAllPayment"
+                                                type="button">
+                                            Get All
+                                        </button>
+                                    </div>
+                                </section>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="paymentTableDetails">
+                        <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 200px;">
+                            <div class="col-11 justify-content-around sectionBorder"
+                                 style="height: 250px; background: white">
+                                <div class="table-responsive overflow-auto " style="height: 200px;">
+                                    <table class="table table-light table-striped table-bordered table-hover">
+                                        <thead class="text-dark table-info text-center  table-bordered sticky-top">
+                                        <tr>
+                                            <th scope="col">Payment ID</th>
+                                            <th scope="col">Rent ID</th>
+                                            <th scope="col">Payment Type</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Car Cost</th>
+                                            <th scope="col">Damage Cost</th>
+                                            <th scope="col">Driver Cost</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblPayment"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="../../assets/js/jquery-3.7.0.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/aos/aos.js"></script>
+<script src="../../assets/js/adminFormJs.js"></script>
+<script src="../../assets/controller/PaymentDetailsController.js"></script>
+
+</body>
+</html>

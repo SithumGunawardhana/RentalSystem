@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sithum Car Rental | Rent Request</title>
+    <meta name="theme-color" content="#2980b9">
+    <meta name="view" content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=2">
+    <link rel="icon" href="../../favicon1.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/aos/aos.css">
+    <link rel="stylesheet" href="../../assets/css/adminFormStyles.css">
+    <link rel="stylesheet" href="../../assets/css/RentRequest.css">
+</head>
+<body>
+<header class="header fixed-top" id="header">
+    <nav class="navbar navbar-expand-lg bg-transparent  ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../../favicon1.png" alt="Logo" width="40px" height="40px"
+                     class="d-inline-block align-text-top"> Sithum Car Rental
+            </a>
+
+
+        </div>
+    </nav>
+</header>
+
+
+<!-- ----------------------------------------Menu Side------------------------------------------------- -->
+<div class="container-fluid">
+    <div class="row gy-4">
+        <div class="col-2 position-relative">
+            <div class="position-relative mt-4">
+                <div id="sidebar" class="sidebar col-2">
+                    <ul class="sidebar-nav" id="sidebar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="../AdminForm.html">
+                                <i class="fas fa-chart-line"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse"
+                               href="#">
+                                <i class="fas fa-tasks"></i>Manage
+                            </a>
+                            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="ManageCustomers.html">
+                                        <i class="fas fa-users"></i>Customer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ManageDriver.html">
+                                        <i class="fas fa-user-alt"></i>Driver
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ManageCars.html">
+                                        <i class="fas fa-car"></i>Car
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                               href="#">
+                                <i class="fas fa-info-circle"></i>Details
+                            </a>
+                            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="PaymentDetails.html">
+                                        <i class="fas fa-money-bill-wave"></i>Payment Details
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="RentDetails.html">
+                                        <i class="fas fa-exchange-alt"></i>Rent Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#" id="myDetailsSection">
+                                <i class="fas fa-retweet"></i>Rent Request
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="IncomeDetails.html" id="incomeDetails">
+                                <i class="fas fa-chart-bar"></i>Income Details
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="AdminProfile.html" id="profileDetails">
+                                <i class="fas fa-user"></i>Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="../../index.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>LogOut</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 d-flex mt-5 position-relative">
+            <div class="content ps-0 ps-lg-5" id="dashboardContents">
+                <h3 id="dashboardHeader">Rent Request </h3>
+
+            </div>
+
+            <div class="section-rent-request" id="section-rent-request" >
+                <div class="row ms-0 me-0">
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="rent_Id" class="form-label mb-0">Rent ID</label>
+                            <input type="text" class="form-control" id="rent_Id"
+                                   name="rent_Id" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="pickupDate" class="form-label mb-0">Pickup Date</label>
+                            <input type="text" class="form-control" id="pickupDate"
+                                   name="pickupDate" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="returnDate" class="form-label mb-0">Return Date</label>
+                            <input type="text" class="form-control" id="returnDate"
+                                   name="returnDate" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="registrationNumber" class="form-label mb-0">Registration Number</label>
+                            <input type="text" class="form-control" id="registrationNumber"
+                                   name="registrationNumber" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-0 me-0">
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="cusId" class="form-label mb-0">Customer ID</label>
+                            <input type="text" class="form-control" id="cusId"
+                                   name="cusId" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="licenceNo" class="form-label mb-0">Licence No</label>
+                            <input type="text" class="form-control" id="licenceNo"
+                                   name="licenceNo" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="rentStatus" class="form-label mb-0">Status</label>
+                            <input type="text" class="form-control" id="rentStatus"
+                                   name="rentStatus" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <button type="button" class="btn btn-outline-success mt-3 " id="btnRentAccept">Accept</button>
+                        <button type="button" class="btn btn-outline-danger mt-3" id="btnRentReject">Reject</button>
+                    </div>
+                </div>
+                <div class="search-bar mt-4 mb-3">
+                    <div class="search-form d-flex align-items-center">
+                        <input type="search" class="me-md-1" name="car_Id" id="searchRentalRequest"
+                               placeholder="Search">
+                        <button type="button" class="btn btn-outline-primary me-md-1 col-1"
+                                id="btnSearchRentRequest">Search
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-light row overflow-scroll" style="height: 200px">
+                    <table class="table table-hover table-bordered table-striped">
+                        <thead class="bg-info-subtle">
+                        <tr>
+                            <th>Rent ID</th>
+                            <th>Pickup Date</th>
+                            <th>Return Date</th>
+                            <th>Registration Number</th>
+                            <th>Customer ID</th>
+                            <th>Licence No</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblRentRequest">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../../assets/js/jquery-3.7.0.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/aos/aos.js"></script>
+<script src="../../assets/js/adminFormJs.js"></script>
+<script src="../../assets/controller/RentRequest.js"></script>
+
+</body>
+</html>

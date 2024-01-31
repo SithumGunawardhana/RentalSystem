@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sithum Car Rental | Admin Dashboard</title>
+    <meta name="theme-color" content="#2980b9">
+    <meta name="view" content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=2">
+    <link rel="icon" href="../favicon1.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/aos/aos.css">
+    <link rel="stylesheet" href="../assets/css/adminFormStyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+<!-- -----------------------------Header Section----------------------------------------------------------- -->
+
+<header class="header fixed-top" id="header">
+    <nav class="navbar navbar-expand-lg bg-transparent ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../favicon1.png" alt="Logo" width="40px" height="40px"
+                     class="d-inline-block align-text-top"> Sithum Car Rental
+            </a>
+
+        </div>
+    </nav>
+</header>
+
+<br>
+<!-- ----------------------------------------Menu Side------------------------------------------------- -->
+<div class="container-fluid">
+    <div class="row gy-4">
+        <div class="col-2 position-relative">
+            <div class="position-relative mt-4">
+                <div id="sidebar" class="sidebar col-2">
+                    <ul class="sidebar-nav" id="sidebar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link collapsed text-dark" href="#">
+                                <i class="fas fa-chart-line text-dark"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item text-dark">
+                            <a class="nav-link collapsed text-dark" data-bs-target="#forms-nav" data-bs-toggle="collapse"
+                               href="#">
+                                <i class="fas fa-tasks text-dark"></i>Manage
+                            </a>
+                            <ul id="forms-nav" class="nav-content collapse text-dark " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="adminSubPages/ManageCustomers.html">
+                                        <i class="fas fa-users text-dark"></i>Customer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="adminSubPages/ManageDriver.html">
+                                        <i class="fas fa-user-alt text-dark"></i>Driver
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="adminSubPages/ManageCars.html">
+                                        <i class="fas fa-car text-dark"></i>Car
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed text-dark" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                               href="#">
+                                <i class="fas fa-info-circle text-dark"></i>Details
+                            </a>
+                            <ul id="components-nav" class="nav-content collapse text-dark" data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="adminSubPages/PaymentDetails.html">
+                                        <i class="fas fa-money-bill-wave text-dark"></i>Payment Details
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="adminSubPages/RentDetails.html">
+                                        <i class="fas fa-exchange-alt text-dark"></i>Rent Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed text-dark" href="adminSubPages/RentRequest.html" id="myDetailsSection">
+                                <i class="fas fa-retweet text-dark"></i>Rent Request
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed text-dark" href="adminSubPages/IncomeDetails.html" id="incomeDetails">
+                                <i class="fas fa-chart-bar text-dark"></i>Income Details
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed text-dark" href="adminSubPages/AdminProfile.html" id="profileDetails">
+                                <i class="fas fa-user text-dark"></i>Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed text-dark" href="../index.html">
+                                <i class="fa-solid fa-right-from-bracket text-dark"></i>
+                                <span>LogOut</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 d-flex mt-5 position-relative">
+            <div class="content ps-0 ps-lg-5" id="dashboardContents">
+                <h3 id="dashboardHeader">Admin Dashboard</h3>
+
+            </div>
+            <section class="section-dashboard">
+                <div class="row">
+
+                    <div class="col-10">
+                        <div class="row">
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Cars </h5>
+                                        <div class="d-flex">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-car"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="carCount">0</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Available Cars</h5>
+                                        <div class="d-flex ">
+                                            <div class="detailBox-icon ">
+                                                <i class="fas fa-car"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="availableCarCount">0</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Reserved Cars </h5>
+                                        <div class="d-flex ">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-car"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="reservedCarCount">0</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Driver </h5>
+                                        <div class="d-flex ">
+                                            <div class="detailBox-icon ">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="driverCount">0</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Available Driver </h5>
+                                        <div class="d-flex ">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="availableDriverCount">0</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">UnAvailable Driver</h5>
+                                        <div class="d-flex">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="unAvailableDriverCount">0</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Registered Customers </h5>
+                                        <div class="d-flex">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-user-friends"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="customerCount">0</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">All Bookings </h5>
+                                        <div class="d-flex">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-bookmark"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="BookingCount">0</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Pending Bookings </h5>
+                                        <div class="d-flex">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-bookmark"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="PendingBookingCount">0</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="detailBox">
+                                    <div class="detailBox-body">
+                                        <h5 class="detailBox-title">Active Bookings </h5>
+                                        <div class="d-flex">
+                                            <div class="detailBox-icon">
+                                                <i class="fas fa-bookmark"></i>
+                                            </div>
+                                            <div class="ps-3 detailBox-count">
+                                                <h6 id="ActiveBookingCount">0</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../assets/js/jquery-3.7.0.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/aos/aos.js"></script>
+<script src="../assets/js/adminFormJs.js"></script>
+<script src="../assets/controller/AdminFormController.js"></script>
+
+</body>
+</html>
